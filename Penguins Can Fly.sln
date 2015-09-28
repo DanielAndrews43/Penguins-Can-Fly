@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{71EC99E7-A08C-70DA-0F06-3B6A525DD9AB}") = "Penguins Can Fly", "Assembly-CSharp.csproj", "{FE4A425D-5D3A-1945-45CF-D41A8BA7905F}"
 EndProject
-Project("{71EC99E7-A08C-70DA-0F06-3B6A525DD9AB}") = "Penguins Can Fly", "Assembly-UnityScript.unityproj", "{1223C38C-D7B7-F046-CF09-FBF19BD84D7F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,15 +13,11 @@ Global
 		{FE4A425D-5D3A-1945-45CF-D41A8BA7905F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4A425D-5D3A-1945-45CF-D41A8BA7905F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4A425D-5D3A-1945-45CF-D41A8BA7905F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1223C38C-D7B7-F046-CF09-FBF19BD84D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1223C38C-D7B7-F046-CF09-FBF19BD84D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1223C38C-D7B7-F046-CF09-FBF19BD84D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1223C38C-D7B7-F046-CF09-FBF19BD84D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-															GlobalSection(MonoDevelopProperties) = preSolution
+																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

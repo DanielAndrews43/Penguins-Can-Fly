@@ -46,10 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AddPoint.cs" />
-     <Compile Include="Assets\CameraTracksPlayer.cs" />
-     <Compile Include="Assets\LoopManager.cs" />
-     <Compile Include="Assets\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\AddPoint.cs" />
+     <Compile Include="Assets\Scripts\CameraTracksPlayer.cs" />
+     <Compile Include="Assets\Scripts\LoopManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\SlowBackground.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
