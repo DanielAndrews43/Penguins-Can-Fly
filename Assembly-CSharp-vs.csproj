@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AchievementManager.cs" />
      <Compile Include="Assets\Scripts\AddPoint.cs" />
      <Compile Include="Assets\Scripts\CameraTracksPlayer.cs" />
      <Compile Include="Assets\Scripts\LoopManager.cs" />
