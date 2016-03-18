@@ -4,22 +4,29 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
 	public Vector2 force;
-	public static float speed = 5;
+	public float speed;
 	public KeyCode jump;
 
 	Rigidbody2D player;
 
 	bool flap = false;
-	bool isAlive = true;
+	static bool isAlive = true;
 
 	void Start(){
 		player = GetComponent<Rigidbody2D> ();
-		player.AddForce (force, ForceMode2D.Impulse);
-		player.AddForce (Vector2.right * speed, ForceMode2D.Impulse);
 	}
 
+	public static bool GetAlive(){
+		return isAlive;
+	}
 
 	void Update(){
+
+		if (GameManager.HasClickedStart()) {
+			//player.AddForce (force, ForceMode2D.Impulse);
+			player.AddForce (Vector2.right * speed, ForceMode2D.Impulse);
+			GameManager.SetClickedStartFalse ();
+		}
 
 		if (!isAlive)
 			return;
@@ -27,7 +34,6 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (jump)) {
 			flap = true;
 		}
-
 	}
 
 	void FixedUpdate(){
@@ -39,11 +45,18 @@ public class PlayerScript : MonoBehaviour {
 			player.AddForce(force, ForceMode2D.Impulse);
 			flap = false;
 		}
-
+			
+		transform.Rotate (Vector3.forward);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
 		isAlive = false;
+	}
+
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.CompareTag ("PointBox")) {
+			ScoreManager.AddPoint();
+		}
 	}
 }
 

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
-	public static int score;
+	private static int score;
 	
 	
 	Text text;
@@ -14,7 +14,14 @@ public class ScoreManager : MonoBehaviour
 		text = GetComponent <Text> ();
 		score = 0;
 	}
-	
+
+	public static void AddPoint(){
+		score++;
+	}
+
+	public static int GetPoints(){
+		return score;
+	}
 	
 	void Update (){
 		text.text = "Score: " + score;
