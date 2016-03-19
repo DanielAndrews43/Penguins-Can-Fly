@@ -15,6 +15,8 @@ public class ShopScript : MonoBehaviour {
 
 	bool isBeingScrolled;
 
+	public float speed;
+
 	void Start () {
 
 		skins = new GameObject[skinPrefabs.Length];
@@ -22,7 +24,6 @@ public class ShopScript : MonoBehaviour {
 		scroller = scrollBar.GetComponent<ScrollRect> ();
 
 		scrollBarCenter = scrollBar.transform.position;
-		Debug.Log (scrollBarCenter);
 		scrollBarWidth = scrollBar.GetComponent<RectTransform> ().rect.x * -1;
 
 		for (int i = 0; i < skinPrefabs.Length; i++) {
@@ -72,6 +73,9 @@ public class ShopScript : MonoBehaviour {
 		}
 
 		//move scrollbar until position of GO at index i = center;
-
+		if(scrollBarCenter.x - skins [index].transform.position.x < 0){ // to the right
+			float step = speed * Time.deltaTime;
+			scrollBar.position = Vector3.MoveTowards(scrollBar.position, )
+		}
 	}
 }
