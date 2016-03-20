@@ -75,7 +75,7 @@ public class ShopScript : MonoBehaviour {
 		//move scrollbar until position of GO at index i = center;
 		if(scrollBarCenter.x - skins [index].transform.position.x < 0){ // to the right
 			float step = speed * Time.deltaTime;
-			scrollBar.position = Vector3.MoveTowards(scrollBar.position, )
+
 		}
 	}
 }
