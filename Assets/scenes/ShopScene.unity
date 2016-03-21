@@ -220,6 +220,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -270,12 +271,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinPrefabs:
   - {fileID: 173826, guid: ba47797f894334277ab4d8bf85cfccb3, type: 2}
+  - {fileID: 156698, guid: 83685b0ddde82884fa187dd8f7ec4ffc, type: 2}
   - {fileID: 173826, guid: ba47797f894334277ab4d8bf85cfccb3, type: 2}
-  - {fileID: 173826, guid: ba47797f894334277ab4d8bf85cfccb3, type: 2}
-  - {fileID: 173826, guid: ba47797f894334277ab4d8bf85cfccb3, type: 2}
+  - {fileID: 156698, guid: 83685b0ddde82884fa187dd8f7ec4ffc, type: 2}
   - {fileID: 173826, guid: ba47797f894334277ab4d8bf85cfccb3, type: 2}
   skinHolder: {fileID: 843163372}
   scrollBar: {fileID: 174851554}
+  speed: 0
+  exponent: 1.2
+  maxSize: 2
+  distance: 0.6
 --- !u!4 &744416660
 Transform:
   m_ObjectHideFlags: 0

@@ -11,11 +11,15 @@ public class ShopScript : MonoBehaviour {
 	public GameObject scrollBar;
 
 	Vector3 scrollBarCenter;
-	float scrollBarWidth;
+	float scrollBarWidthHalf;
 
 	bool isBeingScrolled;
 
 	public float speed;
+
+	public float exponent;
+	public int maxSize;
+	public float distance;
 
 	void Start () {
 
@@ -24,10 +28,10 @@ public class ShopScript : MonoBehaviour {
 		scroller = scrollBar.GetComponent<ScrollRect> ();
 
 		scrollBarCenter = scrollBar.transform.position;
-		scrollBarWidth = scrollBar.GetComponent<RectTransform> ().rect.x * -1;
+		scrollBarWidthHalf = scrollBar.GetComponent<RectTransform> ().rect.x * -1;
 
 		for (int i = 0; i < skinPrefabs.Length; i++) {
-			Vector3 GOPosition = new Vector3 (scrollBarCenter.x + (scrollBarWidth / 1.5f * i), scrollBarCenter.y);
+			Vector3 GOPosition = new Vector3 (scrollBarCenter.x + (scrollBarWidthHalf * distance * i), scrollBarCenter.y);
 
 			GameObject GO = (GameObject)Instantiate (skinPrefabs [i], GOPosition, Quaternion.identity);
 			GO.transform.SetParent (skinHolder.transform);
@@ -47,10 +51,11 @@ public class ShopScript : MonoBehaviour {
 
 		for (int i = 0; i < skins.Length; i++) {
 			float difference = Mathf.Abs (scrollBarCenter.x - skins [i].transform.position.x);
-			float proportion = 3 - Mathf.Pow ((difference) / (scrollBarWidth/2), 2);
+			float percentage = difference / scrollBarWidthHalf;
+			float proportion = maxSize - (1 * Mathf.Pow ((percentage), exponent));
 
-			if (proportion < 0) {
-				proportion = 0;
+			if (proportion < 1) {
+				proportion = 1;
 			}
 			skins [i].transform.localScale = new Vector3 (proportion, proportion, 1);
 		}
