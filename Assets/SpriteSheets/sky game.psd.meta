@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4f8261112c39b42e3a2572848fc43cbd
-timeCreated: 1458636373
+timeCreated: 1458638670
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -31,7 +31,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -55,33 +55,33 @@ TextureImporter:
     - name: sky game_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 441
-        width: 127
-        height: 267
+        x: 87
+        y: 456
+        width: 150
+        height: 266
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -63.5, y: 133.5}
-        - {x: -63.5, y: -133.5}
-        - {x: 63.5, y: -133.5}
-        - {x: 63.5, y: 133.5}
+      - - {x: -75, y: 133}
+        - {x: -75, y: -133}
+        - {x: 75, y: -133}
+        - {x: 75, y: 133}
     - name: sky game_1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 441
-        width: 129
-        height: 267
+        x: 288
+        y: 456
+        width: 149
+        height: 266
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -64.5, y: 133.5}
-        - {x: -64.5, y: -133.5}
-        - {x: 64.5, y: -133.5}
-        - {x: 64.5, y: 133.5}
+      - - {x: -74.5, y: 133}
+        - {x: -74.5, y: -133}
+        - {x: 74.5, y: -133}
+        - {x: 74.5, y: 133}
     outline: []
   spritePackingTag: 
   userData: 
