@@ -15,4 +15,12 @@ public class ButtonManager : MonoBehaviour {
 	public void ToAchievements(){
 		SceneManager.LoadScene (2);
 	}
+
+	public void ToShop(){
+		SceneManager.LoadScene (3);
+	}
+
+	public void ToSettings(){
+		SceneManager.LoadScene (4);
+	}
 }

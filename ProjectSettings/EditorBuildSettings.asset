@@ -11,3 +11,9 @@ EditorBuildSettings:
     path: Assets/scenes/GameScene.unity
   - enabled: 1
     path: Assets/scenes/AchievementScene.unity
+  - enabled: 1
+    path: Assets/scenes/ShopScene.unity
+  - enabled: 1
+    path: Assets/scenes/SettingScene.unity
+  - enabled: 1
+    path: Assets/scenes/EndGameScene.unity
