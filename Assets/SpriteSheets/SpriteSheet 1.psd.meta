@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 794d46fb871df4f7db9329794cda431d
-timeCreated: 1458630149
+timeCreated: 1458671278
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -150,14 +150,20 @@ TextureImporter:
     - name: SpriteSheet 1_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 179
-        width: 18
-        height: 21
+        x: 187
+        y: 119
+        width: 65
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -8.5, y: 39}
+        - {x: -32.5, y: 3}
+        - {x: -32.5, y: -39}
+        - {x: 32.5, y: -39}
+        - {x: 32.5, y: -12}
+        - {x: 9.5, y: 39}
     outline: []
   spritePackingTag: 
   userData: 
