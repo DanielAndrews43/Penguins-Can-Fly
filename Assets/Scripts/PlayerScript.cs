@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour {
 	bool flap = false;
 	static bool isAlive = true;
 
+	public bool godMode;
+
 	void Start(){
 		player = GetComponent<Rigidbody2D> ();
 	}
@@ -50,6 +52,9 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
+		if (godMode) {
+			return;
+		}
 		isAlive = false;
 	}
 
