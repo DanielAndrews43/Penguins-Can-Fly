@@ -3,8 +3,8 @@ using System.Collections;
 
 public class LoopManager : MonoBehaviour {
 
-	float obstacleMin = 0.2f;
-	float obstacleMax = 2.16f;
+	float obstacleMin = -0.3f;
+	float obstacleMax = 2.7f;
 
 	public int numPanels;
 
