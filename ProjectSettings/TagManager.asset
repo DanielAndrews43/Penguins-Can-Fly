@@ -8,6 +8,10 @@ TagManager:
   - Sky
   - AchievementHolder
   - Canvas
+  - PointBox
+  - Enemy
+  - Boundary
+  - Water
   layers:
   - Default
   - TransparentFX

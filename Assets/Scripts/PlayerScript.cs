@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour {
 	static bool isAlive = true;
 
 	public bool godMode;
+	float timeLeft = 0.1f;
 
 	void Start(){
 		player = GetComponent<Rigidbody2D> ();
@@ -30,8 +31,16 @@ public class PlayerScript : MonoBehaviour {
 			GameManager.SetClickedStartFalse ();
 		}
 
-		if (!isAlive)
+		if (!isAlive) {
+			if(timeLeft >= 0)
+				timeLeft -= Time.deltaTime;
+			else {
+				this.GetComponent<CircleCollider2D> ().enabled = false;
+				player.velocity = new Vector3 (0, player.velocity.y);
+			}
+			player.gravityScale = 3;
 			return;
+		}
 
 		if (Input.GetKeyDown (jump)) {
 			flap = true;

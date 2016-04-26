@@ -22,9 +22,11 @@ public class LoopManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
-		float width = ((BoxCollider2D)coll).size.x;
+
+		float width = ((BoxCollider2D)coll).size.x * coll.transform.localScale.x;
 		Vector3 pos = coll.transform.position;
-		pos.x += width * numPanels * coll.transform.localScale.x;
+
+		pos.x += width * numPanels;
 
 		if (coll.tag == "Obstacle") {
 			pos.y = Random.Range (obstacleMin, obstacleMax);
